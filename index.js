@@ -25,7 +25,7 @@ app.use(passport.session());
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
 
-if (process.env.NODE_ENV === 'PRODUCTION') {
+if (process.env.NODE_ENV === 'production') {
   //express will serve up production assets like our main.js file or main.css
   app.use(express.static('client/build')); //if any route gets in and doesnt match any authRoutes nor billingRoutes see if it maches any route we have in /client/build
 
